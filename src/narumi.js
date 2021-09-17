@@ -22,7 +22,7 @@ client.on('messageCreate', async message => {
     message.channel.send('Pong!')
   }else if(message.content === '!test'){
     const exampleEmbed = new MessageEmbed()
-      .setColor('#0099ff')
+      .setColor('#EBB0FC')
       .setTitle('Some title')
       .setURL('https://discord.js.org/')
       .setAuthor('Some name', 'https://i.imgur.com/AfFp7pu.png', 'https://discord.js.org')
