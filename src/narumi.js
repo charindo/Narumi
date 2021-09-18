@@ -18,8 +18,11 @@ client.on('ready', () => {
 })
 
 client.on('messageCreate', async message => {
+  if (message.author.id == client.user.id || message.author.bot){
+    return;
+  }
   if (message.content === '!ping') {
-    message.channel.send('Pong!')
+    message.channel.send('Pong!');
   }else if(message.content === '!test'){
     const exampleEmbed = new MessageEmbed()
       .setColor('#EBB0FC')
@@ -41,6 +44,6 @@ client.on('messageCreate', async message => {
 
     message.channel.send({ embeds: [exampleEmbed] });
   }
-}) 
+});
 
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN);
